@@ -1,115 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="JavaScript.js"></script>
-    <title>Document</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="table.css" />
+    <title>Table</title>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Gender</th>
+          <th>Email</th>
+          <th>city</th>
+          <th>First Vaccination</th>
+          <th>Second Vaccination</th>
+        </tr>
+      </thead>
+      <tbody id="table-body"></tbody>
+    </table>
 
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family:Arial, Helvetica, sans-serif;
-        }
-        .container{
-            width:100%;
-            height:100vh;
-            background: #3c5077;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .btn{
-            padding: 10px 60px;
-            background:#fff;
-            border:0;
-            outline: none;
-            cursor: pointer;
-            font-size: 22px;
-            font-weight: 500;
-            border-radius:30px;
-
-
-        }
-    
-        .popup{
-    width:400px;
-    background:#fff;
-    border-radius :10px;
-    position:absolute;
-    top: 0%;
-    left:50%;
-    transform: translate(-50%,-50%) scale(0.1);  
-    align-items: center;
-    text-align: center;
-    padding:30px 10px;
-    color: #333;
-    transition: transform 0.4s,top 0.4s;
-    visibility: hidden;
-    transition: transform 0.4s,top 0.4s;
-   
-}
-
-.popup img{
-    width: 100px;
-    margin-top: -85px;
-    border-radius: 50%;
-    box-shadow: 0 5px 50px rgba(0, 0, 0, 0.2);
-
-}
-.popup h2{
-    font-size:38px;
-    font-weight: 500;
-    margin: 30px 0 10px;
-
-}
-.popup button{
-    width: 100%;
-    margin-top:50px;
-    padding:10px 0 ;
-    background: #6fd649;
-    color:#fff;
-    border: 0;
-    outline: none;
-    font-size:18px;
-    border-radius:10px;
-    cursor:pointer;
-    box-shadow: 0px 20px 20px rgba(92, 90, 104, 0.2);
-}
-.openPopup{
-    visibility:visible;
-    top:50%;
-    transform: translate(-50%,-50% ) scale(1);
-}   
-    </style>
-</head>
-<body>
-    
-    <div  class="container" id="cont" >
-        <button type="submit" class="btn" name="Submit"  class="addhidden" onclick="openPopup()"  > Submit</button>
-        <div class="popup" id="popup">
-        <img src="tick.png" >
-        <h2>Thank You</h2>
-        <p>Your Details has been successfully Submitted.Thanks</p>
-        <button type="button" onclick="closePopup()">OK</button>
-        </div>
+    <div id="final">
+      <button id="button">Go back</button>
     </div>
-
-        <script>
-            let popup =document.getElementById("popup");
-            const cont = document.getElementById("cont");
-            function openPopup(){
-              popup.classList.add("openPopup");
-              cont.classList.remove("container");
-            }
-            function closePopup(){
-              popup.classList.remove("openPopup");
-            }
-          </script>
-</body>
+  </body>
+  <script src="script4.js"></script>
 </html>
-
